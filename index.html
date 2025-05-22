@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYC Blockchain - Dual-Chain Implementation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">BYC</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#coins">Coins</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="https://github.com/moronibr/BYC" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>BYC Blockchain</h1>
+            <p class="subtitle">A secure, scalable dual-chain implementation supporting multiple coin types</p>
+            <div class="cta-buttons">
+                <a href="#installation" class="btn primary">Get Started</a>
+                <a href="https://github.com/moronibr/BYC" target="_blank" class="btn secondary">View on GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-link"></i>
+                    <h3>Dual-Chain System</h3>
+                    <p>Golden and Silver chains for enhanced functionality and flexibility</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Proof of Work</h3>
+                    <p>Secure consensus mechanism ensuring network integrity</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Multiple Coin Types</h3>
+                    <p>Support for various coin denominations and special coins</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>P2P Networking</h3>
+                    <p>Decentralized peer-to-peer network architecture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2>Technical Architecture</h2>
+            <div class="architecture-grid">
+                <div class="arch-card">
+                    <h3>Core Components</h3>
+                    <ul>
+                        <li>Dual-chain system</li>
+                        <li>UTXO-based transactions</li>
+                        <li>LevelDB storage</li>
+                        <li>RESTful API</li>
+                    </ul>
+                </div>
+                <div class="arch-card">
+                    <h3>Network</h3>
+                    <ul>
+                        <li>P2P networking</li>
+                        <li>Peer discovery</li>
+                        <li>Block propagation</li>
+                        <li>Network sync</li>
+                    </ul>
+                </div>
+                <div class="arch-card">
+                    <h3>Security</h3>
+                    <ul>
+                        <li>ECDSA signing</li>
+                        <li>SHA-256 hashing</li>
+                        <li>Rate limiting</li>
+                        <li>DDoS protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2>Installation</h2>
+            <div class="platform-tabs">
+                <div class="tab active" data-platform="windows">Windows</div>
+                <div class="tab" data-platform="linux">Linux</div>
+                <div class="tab" data-platform="macos">macOS</div>
+            </div>
+            <div class="platform-content">
+                <div class="platform-instructions active" id="windows">
+                    <h3>Windows Installation</h3>
+                    <ol>
+                        <li>Download <a href="https://github.com/moronibr/BYC/releases/download/v1.0.0/byc-windows.zip" target="_blank">byc-windows.zip</a></li>
+                        <li>Extract the zip file</li>
+                        <li>Double-click byc.exe to start</li>
+                    </ol>
+                </div>
+                <div class="platform-instructions" id="linux">
+                    <h3>Linux Installation</h3>
+                    <ol>
+                        <li>Download <a href="https://github.com/moronibr/BYC/releases/download/v1.0.0/byc-linux.tar.gz" target="_blank">byc-linux.tar.gz</a></li>
+                        <li>Extract: <code>tar -xzf byc-linux.tar.gz</code></li>
+                        <li>Make executable: <code>chmod +x byc</code></li>
+                        <li>Run: <code>./byc</code></li>
+                    </ol>
+                </div>
+                <div class="platform-instructions" id="macos">
+                    <h3>macOS Installation</h3>
+                    <ol>
+                        <li>Download <a href="https://github.com/moronibr/BYC/releases/download/v1.0.0/byc-macos.tar.gz" target="_blank">byc-macos.tar.gz</a></li>
+                        <li>Extract: <code>tar -xzf byc-macos.tar.gz</code></li>
+                        <li>Make executable: <code>chmod +x byc-mac</code></li>
+                        <li>Run: <code>./byc-mac</code></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="release-info">
+                <p>Current version: v1.0.0</p>
+                <a href="https://github.com/moronibr/BYC/releases" target="_blank" class="btn secondary">View All Releases</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="coins" class="coins">
+        <div class="container">
+            <h2>Coin System</h2>
+            <div class="coin-types">
+                <div class="coin-category">
+                    <h3>Golden Block Coins</h3>
+                    <ul>
+                        <li class="mineable">Leah (base unit) <span class="mineable-badge">Mineable</span></li>
+                        <li class="mineable">Shiblum <span class="mineable-badge">Mineable</span></li>
+                        <li class="mineable">Shiblon <span class="mineable-badge">Mineable</span></li>
+                        <li class="special">Antium <span class="special-badge">Cross-Block</span></li>
+                        <li>Senine</li>
+                        <li>Seon</li>
+                        <li>Shum</li>
+                        <li>Limnah</li>
+                        <li>Antion</li>
+                    </ul>
+                </div>
+                <div class="coin-category">
+                    <h3>Silver Block Coins</h3>
+                    <ul>
+                        <li class="mineable">Leah (base unit) <span class="mineable-badge">Mineable</span></li>
+                        <li class="mineable">Shiblum <span class="mineable-badge">Mineable</span></li>
+                        <li class="mineable">Shiblon <span class="mineable-badge">Mineable</span></li>
+                        <li>Senum</li>
+                        <li>Amnor</li>
+                        <li>Ezrom</li>
+                        <li>Onti</li>
+                    </ul>
+                </div>
+                <div class="coin-category">
+                    <h3>Special Coins</h3>
+                    <ul>
+                        <li class="special-coin">
+                            <strong>Ephraim Coin</strong>
+                            <span class="supply-badge">Max: 15M</span>
+                            <div class="coin-requirements">
+                                <p>Creation Requirements (Fibonacci Sequence):</p>
+                                <ul>
+                                    <li>1 Leah</li>
+                                    <li>1 Shiblum</li>
+                                    <li>2 Shiblon</li>
+                                    <li>3 Senine</li>
+                                    <li>5 Seon</li>
+                                    <li>8 Shum</li>
+                                    <li>13 Limnah</li>
+                                    <li>21 Antion</li>
+                                </ul>
+                                <p class="total-value">Total Value: 54 Leah</p>
+                            </div>
+                        </li>
+                        <li class="special-coin">
+                            <strong>Manasseh Coin</strong>
+                            <span class="supply-badge">Max: 15M</span>
+                            <div class="coin-requirements">
+                                <p>Creation Requirements (Fibonacci Sequence):</p>
+                                <ul>
+                                    <li>1 Senum</li>
+                                    <li>1 Amnor</li>
+                                    <li>2 Ezrom</li>
+                                    <li>3 Onti</li>
+                                    <li>1 Antion (from Golden Block)</li>
+                                </ul>
+                                <p class="total-value">Total Value: 28 Leah</p>
+                            </div>
+                        </li>
+                        <li class="special-coin">
+                            <strong>Joseph Coin</strong>
+                            <span class="supply-badge">Max: 3M</span>
+                            <div class="coin-requirements">
+                                <p>Creation Requirements:</p>
+                                <ul>
+                                    <li>1 Ephraim Coin</li>
+                                    <li>1 Manasseh Coin</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="coin-note">
+                <p><strong>Note:</strong> Only Leah, Shiblum, and Shiblon are mineable coins, found in both Golden and Silver blocks. All other coins are obtained through different mechanisms. An Antium is unique as it can be transferred between Golden and Silver blocks, while other coins are restricted to their respective blocks.</p>
+                <p class="special-note"><strong>Special Coins Note:</strong> Ephraim and Manasseh coins are created using Fibonacci sequence amounts of their respective block coins. Once you have both Ephraim and Manasseh coins, you can create Joseph coins. Each special coin has a maximum supply limit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="security">
+        <div class="container">
+            <h2>Security Features</h2>
+            <div class="security-grid">
+                <div class="security-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Cryptographic Security</h3>
+                    <ul>
+                        <li>ECDSA for transaction signing</li>
+                        <li>SHA-256 for hashing</li>
+                        <li>Public/private key pairs</li>
+                    </ul>
+                </div>
+                <div class="security-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Block Validation</h3>
+                    <ul>
+                        <li>Proof of Work verification</li>
+                        <li>Transaction signature verification</li>
+                        <li>Double-spending prevention</li>
+                    </ul>
+                </div>
+                <div class="security-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Network Security</h3>
+                    <ul>
+                        <li>Peer authentication</li>
+                        <li>Message encryption</li>
+                        <li>Rate limiting</li>
+                        <li>DDoS protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="whitepaper" class="whitepaper">
+        <div class="container">
+            <div class="whitepaper-content">
+                <h2 class="whitepaper-title">BYC: Brigham Young Chain</h2>
+                <h3 class="whitepaper-subtitle">A Digital Currency Rooted in Faith and Innovation</h3>
+
+                <div class="whitepaper-section">
+                    <h4>Abstract</h4>
+                    <p>BYC (Brigham Young Chain) is a revolutionary cryptocurrency that combines the principles of blockchain technology with the timeless values of faith and community. This whitepaper outlines the vision, technology, and unique value proposition of BYC, demonstrating how it serves as both a digital asset and a tool for strengthening faith and community.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>1. Introduction</h4>
+                    <p>BYC emerges from a vision to create a cryptocurrency that embodies the principles of faith, integrity, and community service. Inspired by the teachings of Brigham Young and his legacy, BYC represents a new paradigm in digital currency - one that combines technological innovation with spiritual values.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>2. Vision and Mission</h4>
+                    <ul class="whitepaper-list">
+                        <li>Strengthens faith and community</li>
+                        <li>Promotes financial literacy and responsibility</li>
+                        <li>Supports charitable causes and community service</li>
+                        <li>Provides a secure and transparent financial system</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>3. Technical Architecture</h4>
+                    <ul class="whitepaper-list">
+                        <li>Secure transactions through advanced cryptography</li>
+                        <li>Transparent and immutable record-keeping</li>
+                        <li>Efficient consensus mechanisms</li>
+                        <li>Scalable network architecture</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>4. Token Economics</h4>
+                    <p>BYC implements a unique token system with special coins:</p>
+                    <ul class="whitepaper-list">
+                        <li><strong>Ephraim Coin:</strong> Representing leadership and responsibility</li>
+                        <li><strong>Manasseh Coin:</strong> Symbolizing unity and strength</li>
+                        <li><strong>Joseph Coin:</strong> Embodying wisdom and guidance</li>
+                    </ul>
+                    <p>Each coin serves a specific purpose in the ecosystem while maintaining the core values of the platform.</p>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>5. Security and Trust</h4>
+                    <ul class="whitepaper-list">
+                        <li>Advanced cryptographic algorithms</li>
+                        <li>Transparent transaction verification</li>
+                        <li>Regular security audits</li>
+                        <li>Community-driven governance</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>6. Use Cases</h4>
+                    <ul class="whitepaper-list">
+                        <li>Community donations and charitable giving</li>
+                        <li>Educational initiatives</li>
+                        <li>Youth programs and activities</li>
+                        <li>Digital asset management</li>
+                        <li>Cross-border transactions</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>7. Community and Governance</h4>
+                    <ul class="whitepaper-list">
+                        <li>Transparent decision-making processes</li>
+                        <li>Community voting mechanisms</li>
+                        <li>Regular updates and improvements</li>
+                        <li>Active community participation</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>8. Future Development</h4>
+                    <ul class="whitepaper-list">
+                        <li>Enhanced security features</li>
+                        <li>Expanded use cases</li>
+                        <li>Integration with more platforms</li>
+                        <li>Community growth initiatives</li>
+                    </ul>
+                </div>
+
+                <div class="whitepaper-section">
+                    <h4>9. Conclusion</h4>
+                    <p>BYC represents a unique convergence of technology and faith, offering a secure, transparent, and value-driven digital currency. By combining blockchain innovation with spiritual principles, BYC creates a platform for financial transactions that strengthens communities and promotes positive values.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BYC Blockchain</h4>
+                    <p>A secure, scalable dual-chain implementation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/moronibr/BYC" target="_blank">GitHub Repository</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>License</h4>
+                    <p>MIT License</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BYC Blockchain. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
